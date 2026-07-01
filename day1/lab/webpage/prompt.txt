@@ -1,0 +1,10 @@
+Use this if you prefer a short, straightforward prompt that matches the task guidelines exactly.
+
+"Create a simple web page using HTML, CSS, and JavaScript in three separate files. The interface should accept a user's input for an array of numbers (separated by commas), execute an in-place QuickSort algorithm on click, and display both the original and sorted result on the page along with the execution time."
+
+3 Tips for Prompting Code Generation
+Specify Separation: Explicitly mentioning "three separate files" prevents the AI from lazily bundling the CSS and JavaScript inside the HTML file using <style> and <script> tags.
+
+Define Sanitization: Asking the AI to "sanitize the input" forces it to write code that handles spaces, trailing commas, or letters without crashing.
+
+Mention State Management: Adding "array cloning" ensures the AI remembers that QuickSort often mutates arrays in-place, which would otherwise accidentally ruin subsequent runs on the page.

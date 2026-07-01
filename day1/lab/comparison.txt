@@ -1,0 +1,9 @@
+Compare Prompt:
+Compare the two approaches of this algorithm and summarize the comparison into a small paragraph
+
+Answer:
+While both approaches share the same $O(n \log n)$ average time complexity and partition logic,
+they differ entirely in memory handling: **Recursive QuickSort** relies on the language's built-in call stack,
+making it clean and readable but vulnerable to "Maximum call stack size exceeded" errors on massive or poorly structured datasets.
+Conversely, **Iterative QuickSort** bypasses the call stack by manually tracking subarray boundaries using an explicit array stack on the heap,
+trading code simplicity for absolute resilience against stack overflow crashes when sorting ultra-large arrays.

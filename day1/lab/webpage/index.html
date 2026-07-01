@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickSort Visualizer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>QuickSort Dashboard</h1>
+      <p class="subtitle">
+        Enter a list of numbers separated by commas to sort them.
+      </p>
+
+      <div class="form-group">
+        <label for="arrayInput">Input Array:</label>
+        <input
+          type="text"
+          id="arrayInput"
+          placeholder="e.g., 7, 9, 5, 6, 4, 2, 1, 8, 3"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="algoSelect">Choose Implementation:</label>
+        <select id="algoSelect">
+          <option value="naive">Naive Out-of-Place</option>
+          <option value="enhanced">Copilot Enhanced Iterative</option>
+          <option value="inplace">Custom In-Place Recursive</option>
+          <option value="iterative" selected>
+            Custom In-Place Iterative (Median-of-3)
+          </option>
+        </select>
+      </div>
+
+      <button id="sortBtn">Sort Array</button>
+
+      <div class="results-box hidden" id="resultsBox">
+        <h3>Results</h3>
+        <div class="result-row">
+          <strong>Original:</strong> <span id="originalDisplay"></span>
+        </div>
+        <div class="result-row">
+          <strong>Sorted:</strong>
+          <span id="sortedDisplay" class="highlight"></span>
+        </div>
+        <div class="result-row telemetry">
+          <small>Execution time: <span id="timeDisplay">0</span> ms</small>
+        </div>
+      </div>
+    </div>
+
+    <script src="quicksort.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

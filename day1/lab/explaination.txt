@@ -1,0 +1,37 @@
+Second prompt: explain how the function you generated works, and what is it's time and space complixety?
+
+Answer: 
+
+I’m reviewing the current implementation so I can explain it accurately and tailor the complexity details to the exact code.
+
+Read [](file:///g%3A/ITImaterial/Vibe%20Coding/day1/lab/quicksort.js)
+
+## How the function works
+
+In quicksort.js, the `quickSort(arr)` function sorts numbers by using a pivot value:
+
+1. It checks whether the array has 1 or 0 elements and returns it immediately.
+2. It picks the middle element as the pivot.
+3. It creates three smaller arrays:
+   - `left`: values smaller than the pivot
+   - `middle`: values equal to the pivot
+   - `right`: values larger than the pivot
+4. It recursively sorts `left` and `right`, then combines them as:
+   - sorted left + middle + sorted right
+
+This is the basic idea of quick sort: split, sort, and combine.
+
+## Time complexity
+
+- Average case: O(n log n)
+- Best case: O(n log n)
+- Worst case: O(n²)
+
+The worst case happens when the pivot is always the smallest or largest element, so the array is split very unevenly.
+
+## Space complexity
+
+- Extra space: O(n) for the new arrays created at each step
+- Recursion stack: O(log n) on average, but O(n) in the worst case
+
+> In short: quick sort is usually fast in practice, but its performance depends heavily on how well the pivot splits the array.
